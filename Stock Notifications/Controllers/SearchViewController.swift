@@ -18,6 +18,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         searchListTable.delegate = self
         searchListTable.dataSource = self
+        stockSearchBar.delegate = self
     }
 
 }
@@ -38,6 +39,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SearchViewController: UISearchBarDelegate {
     
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // display results
+    }
     
 }
